@@ -10,7 +10,7 @@ function About() {
         <a href="#" className="card-item">
           <img src={dev} alt="Card Image" />
 
-          <span className="developer">Web Developer</span>
+          <span className="developer">ANAND - Web Developer</span>
           <h3>
             A Collaborates with designers and stakeholders to bring website
             designs to life.
@@ -21,7 +21,7 @@ function About() {
         </a>
         <a href="#" className="card-item">
           <img src={test} alt="Card Image" />
-          <span className="designer">Tester</span>
+          <span className="designer">JEEVA - Tester</span>
           <h3>
             Performs thorough testing to identify software bugs and defects.
           </h3>
@@ -31,7 +31,7 @@ function About() {
         </a>
         <a href="#" className="card-item">
           <img src={cloud} alt="Card Image" />
-          <span className="editor">Cloud Engineer</span>
+          <span className="editor">DIWAKAR - Cloud Engineer</span>
           <h3>Designs, deploys, and manages cloud infrastructure solutions.</h3>
           <div className="arrow">
             <i className="fas fa-arrow-right card-icon"></i>
