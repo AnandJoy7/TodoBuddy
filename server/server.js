@@ -14,7 +14,11 @@ let sql;
 // db.run(sql);
 
 const app = express()
+
+// app.use(express.static(path.join(__dirname + '/public')));
+
 const PORT = process.env.PORT || 5000;
+
 
 app.get("/api", (req, res) => {
     res.json({ "users": ["user1", "user2"] })
@@ -40,6 +44,7 @@ db.run(`CREATE TABLE IF NOT EXISTS users (
   password TEXT
 )`);
 
+
 //query the date
 sql = 'SELECT * FROM users';
 db.all(sql, [], (err, rows) => {
@@ -49,6 +54,11 @@ db.all(sql, [], (err, rows) => {
         console.log(row);
     });
 });
+
+//Drop table
+// db.run('DROP TABLE users');
+
+
 
 // Insert date into table
 // sql = 'INSERT INTO users (email,username,password) VALUES (?,?,?)';
@@ -90,6 +100,7 @@ app.post('/signin', (req, res) => {
     res.status(200).json({ message: 'Login successful' });
   });
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
